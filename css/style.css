@@ -1,0 +1,70 @@
+body .container {
+    background-color: #f3f1f1;
+    display: inline;
+    font-family: Karla, Arial, Helvetica, sans-serif;
+}
+.container {
+    margin: 8vw;
+}
+
+.skip {
+    position: absolute;
+    left: -1000px;
+}
+.skip:focus {
+    position: static;
+}
+
+nav div {
+    background-color: rgb(254, 201, 210, 0.5);
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    align-self:stretch;
+}
+
+i.fa.fa-home {
+    grid-column: 1/2;
+    font-size: 3rem;
+}
+i.fa.fa-globe {
+    grid-column: 2/3;
+    font-size: 3rem;
+}
+i.fa.fa-picture-o {
+    grid-column: 3/4;
+    font-size: 3rem;
+}
+a span {
+    font-size: 1.5rem;
+    display: block;
+    align-self: center;
+    padding-left: 1rem;
+    width: auto;
+}
+
+div a {
+    display: flex;
+    align-self: center;
+    justify-content: left;
+    width: 100%;
+    padding-left: 10px;
+}
+
+img {
+    width: 100%;
+}
+ol {
+    padding: 1vw 6vw;
+}
+li, h1, p {
+    padding: 2vw;
+}
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
