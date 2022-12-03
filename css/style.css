@@ -8,10 +8,11 @@ body .container, footer {
     font-family: Karla, Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #28262C;
+    border-top: 1px solid #28262C;
+    border-bottom: 1px solid #28262C;
     line-height: 1.5;
 }
 .about-text, .three-key-components {
-    margin: 0 4px 0 4px;
     width: 100%;
 }
 .container {
@@ -32,17 +33,23 @@ nav div {
     background-color: rgb(254, 201, 210, 1);
     color: #28262C;
     width: 100%;
-    height: 12vw;
+    height: 46px;
     margin: 0;
     display: grid;
+    column-gap: 1px;
+    border-top: 1px solid #28262C;
+    border-bottom: 1px solid #28262C;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
-    box-shadow: 0 4px 4px rgb(40 38 44 / 16%);
     position: fixed;
 }
 h1 {
     margin-top: 10vw;
+    margin-bottom: 2vw;
+    border-top: 1px solid #28262C;
+    border-bottom: 1px solid #28262C;
+    background: rgb(254, 201, 210, 0.5);
 }
 i.fa.fa-home {
     text-decoration: none;
@@ -64,7 +71,7 @@ i.fa.fa-picture-o {
 }
 a span {
     color: #28262C;
-    font-size: 4vw;
+    font-size: 4.5vw;
     display: block;
     align-self: center;
     padding-left: 0.5rem;
@@ -73,9 +80,27 @@ a span {
 div a {
     display: flex;
     align-self: center;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     text-decoration: none;
-    width: 80%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    align-items: center;
+}
+figcaption {
+    font-family: Karla, Arial, Helvetica, sans-serif;
+    text-transform:none;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 4vw;
+    margin: 2vw 0 2vw 0;
+    color: #28262C;
+    text-align: center;
+}
+
+a.current {
+    background: rgb(219, 82, 117, 0.25);
 }
 a.current span {
     text-decoration: underline;
@@ -105,20 +130,19 @@ ol {
     flex-flow: column;
 }
 p, li {
-    padding: 2vw 4vw 2vw 4vw;
+    padding: 1vw 4vw 2vw 4vw;
 }
 h1, h2 {
     padding: 1vw;
 }
 h1 {
     text-align: center;
-    font-size: 24px;
+    font-size: 22px;
 }
 h2 {
     text-align: center;
     font-size: 20px;
-    padding-bottom: 2vw;
-    padding-top: 4vw; 
+    padding-top: 2vw; 
 }
 .item-heading, li {
     font-weight: bold;
@@ -186,7 +210,6 @@ footer {
     background-color: #FEC9D2;
     color:#28262C;
     padding: 4vw;
-    filter: drop-shadow(0px 0px 4px rgba(40, 38, 44, 0.25));
 }
 footer p {
     font-style: normal;
@@ -217,6 +240,8 @@ a.image-hyperlink {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-top: 6vw;
+    margin-bottom: 4vw;
 }
 .image-flex-container img {
     width: 100%;
@@ -227,15 +252,22 @@ a.image-hyperlink {
     body .container, footer, a span {
         font-size: 18px;
     }
+    figcaption {
+        font-size: 2vw;
+    }
     .fa.fa-home, .fa.fa-globe, .fa.fa-picture-o {
         display: none;
     }
     div a {
         justify-content: center;
+        width: 80%;
+        height: 64%;
     }
     a {
         border: 1px solid #28262C;
+        border-radius: 16px;
         background: rgb(245, 245, 245, 0.75);
+        height: auto;
         text-transform: uppercase;
         padding: 4px;
     }
@@ -249,12 +281,11 @@ a.image-hyperlink {
         font-size: 24px;
     }
     img.decorative-icon {
-        width: 32%;
+        width: 24%;
     }
 
     h2 {
-        margin-top: 2vw;
-        padding-top: 0;
+        padding-top: 2vw;
         font-size: 22px;
     }
     .image-grid-container {
@@ -286,7 +317,7 @@ a.image-hyperlink {
         object-position: -2vw;
     }
     h1 {
-        margin-top: 12vw;
+        margin-top: 6vw;
     }
 }
 
@@ -294,31 +325,32 @@ a.image-hyperlink {
 
 @media screen and (min-width: 1024px) {
     body .container, footer, a span {
-        font-size: 20px;
+        font-size: 26px;
     }
     nav div {
-        height: 8vw;
+        height: 64px;
     }
     h1 {
-        margin-top: 8vw;
+        margin-top: 4vw;
         font-size: 32px;
     }
     h2 {
-        font-size: 24px;
+        font-size: 28px;
+        margin-top:0;
     }
     h3 {
-        font-size: 22px;
+        font-size: 26px;
     }
     i.fa.fa-home, i.fa.fa-globe, i.fa.fa-picture-o {
         display: contents;
-        font-size: 4vw;
+        font-size: 3vw;
     }
     div a {
         height: auto;
         width: 24vw;
     }
     a span {
-        padding-left: 2vw;
+        padding-left: 8px;
     }
     .image-flex-container {
         display: grid;
@@ -355,23 +387,18 @@ a.image-hyperlink {
     .example-9{
         grid-area: ex9;
     }
-
     .example-4{
         grid-area: ex4;
     }
-
     .example-6{
         grid-area: ex6;
     }
-
     .example-7{
         grid-area: ex7;
     }
-
     .example-8{
         grid-area: ex8;
     }
-
     .example-5{
         grid-area: ex5;
     }
@@ -379,7 +406,13 @@ a.image-hyperlink {
 }
 @media screen and (min-width: 2560px) {
     body .container, footer, a span {
-        font-size: 40px;
+        font-size: 48px;
+    }
+    a span {
+        padding-left: 16px;
+    }
+    nav div {
+        height: 120px;
     }
     h1 {
         font-size: 48px;
