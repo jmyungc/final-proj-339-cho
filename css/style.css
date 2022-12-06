@@ -352,7 +352,7 @@ a.resource-hyperlink:visited {
     }
     nav div a {
         justify-content: center;
-        width: 80%;
+        width: 60%;
         height: 48%;
     }
     a {
@@ -454,7 +454,7 @@ a.resource-hyperlink:visited {
     }
     nav div a {
         height: auto;
-        width: 24vw;
+        width: 64%;
     }
     a span {
         padding-left: 8px;
