@@ -44,40 +44,33 @@ nav div {
     justify-items: center;
     position: fixed;
 }
-h1 {
-    margin-top: 10vw;
-    margin-bottom: 2vw;
-    border-top: 1px solid #28262C;
-    border-bottom: 1px solid #28262C;
-    background: rgb(254, 201, 210, 0.5);
-}
 i.fa.fa-home {
     text-decoration: none;
     grid-column: 1/2;
-    font-size: 8vw;
+    font-size: 100%;
     color: #28262C;
 }
 i.fa.fa-globe {
     text-decoration: none;
     grid-column: 2/3;
-    font-size: 8vw;
+    font-size: 100%;
     color: #28262C;
 }
 i.fa.fa-picture-o {
     text-decoration: none;
     grid-column: 3/4;
-    font-size: 8vw;
+    font-size: 100%;
     color: #28262C;
 }
 a span {
     color: #28262C;
-    font-size: 4.5vw;
+    font-size: 100%;
     display: block;
     align-self: center;
-    padding-left: 0.5rem;
+    padding-left: 0.25rem;
     width: auto;
 }
-div a {
+nav div a {
     display: flex;
     align-self: center;
     flex-wrap: wrap;
@@ -85,39 +78,43 @@ div a {
     text-decoration: none;
     width: 100%;
     height: 100%;
-    border: 1px solid black;
+    border-left: 1px solid #28262C;
     align-items: center;
 }
-figcaption {
-    font-family: Karla, Arial, Helvetica, sans-serif;
-    text-transform:none;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 4vw;
-    margin: 2vw 0 2vw 0;
-    color: #28262C;
-    text-align: center;
+nav a:hover {
+    background: #f3f1f1;
 }
-
-a.current {
+a.current, a.current:hover {
+    font-style: oblique;
     background: rgb(219, 82, 117, 0.25);
 }
 a.current span {
-    text-decoration: underline;
     color: #28262C;
 }
 
+/* Body */
 .about-text {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+h1 {
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+    border-top: 1px solid #28262C;
+    border-bottom: 1px solid #28262C;
+    background: rgb(254, 201, 210, 0.5);
+}
 
 /* Images */
-.decorative-icon {
+img.decorative-icon {
     display: flex;
-    width: 80%;
+    width: 40%;
     align-self: center;
+}
+.star-icon {
+    display: flex;
+    justify-content: center;
 }
 img {
     width: 100%;
@@ -137,11 +134,11 @@ h1, h2 {
 }
 h1 {
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
 }
 h2 {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     padding-top: 2vw; 
 }
 .item-heading, li {
@@ -211,57 +208,152 @@ footer {
     color:#28262C;
     padding: 4vw;
 }
-footer p {
-    font-style: normal;
+footer h3{
+    font-style: italic;
+    color:#28262C;
+    text-align: center;
 }
 footer a {
-    color: #28262C;
+    color:#28262C;
     font-weight: bold;
 }
 
 /* Resource Page */
-a.image-hyperlink {
-    width: 100%;
+.resource-text-container {
+    display:flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+a.resource-hyperlink {
+    border: 0;
+    background: inherit;
+    height: inherit;
+    text-transform: none;
     padding: 0;
-    height: auto;
-    border: none;
 }
-.resource-image {
-    width: 100%;
-    max-height: 64vw;
+a.resource-hyperlink:visited {
+    color: rgb(219, 82, 117, 0.25);
 }
-.text-image {
+
+/* Flex image grid */
+.flex-items-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    align-items: center;
 }
+.flex-items-container > div {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.col {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.col > div:first-child {
+    width: 48%;
+    padding-right: 1%;
+}
+.col > div:nth-child(2) {
+    width: 48%;
+}
+
 
 /* Inspiration Page */
-.image-flex-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 6vw;
-    margin-bottom: 4vw;
+.image-grid-container-2 {
+    display: grid;
+    grid-template-areas: 
+        "ex2 ex2 ex2 ex3 ex3 ex3"
+        "ex4 ex4 ex4 ex4 ex4 ex4"
+        "ex4 ex4 ex4 ex4 ex4 ex4"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex1 ex1 ex1 ex1 ex1 ex1"
+        "ex5 ex5 ex5 ex5 ex5 ex5"
+        "ex5 ex5 ex5 ex5 ex5 ex5"
+        "ex6 ex6 ex6 ex7 ex7 ex7"
+        "ex6 ex6 ex6 ex7 ex7 ex7"
+        "ex8 ex8 ex8 ex8 ex8 ex8"
+        "ex8 ex8 ex8 ex8 ex8 ex8"
+        "ex8 ex8 ex8 ex8 ex8 ex8"
+        "ex9 ex9 ex9 ex9 ex9 ex9"
+        "ex9 ex9 ex9 ex9 ex9 ex9";
+    gap: 8px 8px;
+    margin: 4vw;
+    align-items: center;
 }
-.image-flex-container img {
+.image-grid-container-2 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.example-1{
+    grid-area: ex1;
+}
+.example-2{
+    grid-area: ex2;
+}
+.example-3{
+    grid-area: ex3;
+}
+.example-9{
+    grid-area: ex9;
+}
+.example-4{
+    grid-area: ex4;
+}
+.example-6{
+    grid-area: ex6;
+}
+.example-7{
+    grid-area: ex7;
+}
+.example-8{
+    grid-area: ex8;
+}
+.example-5{
+    grid-area: ex5;
 }
 
+.image-3 {
+    border: 0.5px solid rgb(148,121,101, 0.5);
+}
 
-@media screen and (min-width: 600px) {
+/* TABLET VIEW */
+@media screen and (min-width: 768px) {
+    /* Nav */
+    nav a:hover {
+        border: 2px dashed #28262C;
+    }
+    a.current, a.current:hover {
+        font-style: oblique;
+        border: 1px solid #28262C;
+        background: rgb(219, 82, 117, 0.25);
+        box-shadow: 4px 4px 0px 0px #28262C;
+    }
+    a.current span {
+        color: #28262C;
+    }
     body .container, footer, a span {
         font-size: 18px;
-    }
-    figcaption {
-        font-size: 2vw;
     }
     .fa.fa-home, .fa.fa-globe, .fa.fa-picture-o {
         display: none;
     }
-    div a {
+    nav div a {
         justify-content: center;
         width: 80%;
-        height: 64%;
+        height: 48%;
     }
     a {
         border: 1px solid #28262C;
@@ -275,40 +367,38 @@ a.image-hyperlink {
         padding-left: 0;
         font-size: 24px;
     }
+
     h1 {
-        margin-top: 12vw;
+        margin-top: 8vw;
         padding-bottom: 1vw;
         font-size: 24px;
-    }
-    img.decorative-icon {
-        width: 24%;
     }
 
     h2 {
         padding-top: 2vw;
         font-size: 22px;
     }
+
     .image-grid-container {
         overflow:scroll;
         height: auto;
         grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 4vw;
     }
     .image-grid-1, .image-grid-2, .image-grid-3 {
         width: 100%;
         object-position: 0 0;
     }
+
     footer {
         padding: 2vw;
     }
-    footer p {
+    footer h2 {
         padding: 0;
         padding-top: 1vw;
     }
-}
-
-@media screen and (min-width: 768px) {
-    .image-grid-container {
-        margin-bottom: 4vw;
+    nav div {
+        height: 64px;
     }
     .think-icon-1 {
         object-position: 1vw;
@@ -316,22 +406,39 @@ a.image-hyperlink {
     .think-icon-2 {
         object-position: -2vw;
     }
-    h1 {
-        margin-top: 6vw;
+    /* Resource page */
+    .row {
+        order: 1;
+    }
+    .col {
+        order: 0;
+    }
+
+    /* Inspiration page */
+    .image-grid-container-2 {
+        grid-template-areas: 
+            "ex1 ex1 ex1 ex1 ex2 ex2 ex2 ex2"
+            "ex1 ex1 ex1 ex1 ex4 ex4 ex4 ex4"
+            "ex1 ex1 ex1 ex1 ex5 ex5 ex5 ex5"
+            "ex1 ex1 ex1 ex1 ex9 ex9 ex9 ex9"
+            "ex3 ex3 ex3 ex3 ex3 ex3 ex3 ex3"
+            "ex6 ex6 ex6 ex6 ex7 ex7 ex7 ex7"
+            "ex8 ex8 ex8 ex8 ex8 ex8 ex8 ex8"
+            "ex8 ex8 ex8 ex8 ex8 ex8 ex8 ex8";
     }
 }
 
 
-
+/* LAPTOP/DESKTOP VIEW */
 @media screen and (min-width: 1024px) {
     body .container, footer, a span {
         font-size: 26px;
     }
     nav div {
-        height: 64px;
+        height: 72px;
     }
     h1 {
-        margin-top: 4vw;
+        margin-top: 6vw;
         font-size: 32px;
     }
     h2 {
@@ -345,14 +452,14 @@ a.image-hyperlink {
         display: contents;
         font-size: 3vw;
     }
-    div a {
+    nav div a {
         height: auto;
         width: 24vw;
     }
     a span {
         padding-left: 8px;
     }
-    .image-flex-container {
+    .image-grid-container-2 {
         display: grid;
         grid-template-areas:
             "ex1 ex1 ex1 ex2 ex2 ex2 ex2 ex2"
@@ -363,8 +470,7 @@ a.image-hyperlink {
             "ex4 ex4 ex4 ex4 ex4 ex4 ex4 ex4"
             "ex6 ex6 ex6 ex6 ex7 ex7 ex7 ex7"
             "ex6 ex6 ex6 ex6 ex7 ex7 ex7 ex7"
-            "ex8 ex8 ex8 ex8 ex5 ex5 ex5 ex5"
-            ;
+            "ex8 ex8 ex8 ex8 ex5 ex5 ex5 ex5";
         gap: 24px 8px;  
         margin: 25px;
         width: auto;
@@ -372,37 +478,37 @@ a.image-hyperlink {
         align-items: stretch;
         justify-items: center;
     }
-    .image-flex-container img {
+    .image-grid-container-2 img {
         width: 90%;
     }
-    .example-1{
-        grid-area: ex1;
+    .flex-items-container {
+        justify-content: space-between;
     }
-    .example-2{
-        grid-area: ex2;
+    .col {
+        flex-basis: calc(99%/2);
+        padding: 0;
     }
-    .example-3{
-        grid-area: ex3;
+    .col-1 {
+        order: 0;
     }
-    .example-9{
-        grid-area: ex9;
+    .col-2 {
+        order: 1;
     }
-    .example-4{
-        grid-area: ex4;
+    .row-3 {
+        order: 2;
     }
-    .example-6{
-        grid-area: ex6;
+    .row-2 {
+        order: 4;
     }
-    .example-7{
-        grid-area: ex7;
+    .col-3 {
+        order: 3;
+        flex-basis: 100%;
     }
-    .example-8{
-        grid-area: ex8;
-    }
-    .example-5{
-        grid-area: ex5;
+    .row-1 {
+        order: 5;
     }
 
+/* 4K */
 }
 @media screen and (min-width: 2560px) {
     body .container, footer, a span {
