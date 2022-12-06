@@ -109,7 +109,7 @@ h1 {
 /* Images */
 img.decorative-icon {
     display: flex;
-    width: 40%;
+    width: 24%;
     align-self: center;
 }
 .star-icon {
@@ -162,18 +162,18 @@ li {
 }
 .work-icon-1, .think-icon-1{
     grid-column: 1/2;
-    width: 72%;
+    width: 50%;
 }
 .work-icon-2, .think-icon-2 {
     grid-column: 2/3;
-    width: 72%;
+    width: 50%;
 }
 .think-icon-1 {
-    width: 40%; 
+    width: 32%; 
 
 }
 .think-icon-2 {
-    width: 72%;
+    width: 64%;
 }
 
 /* Scrollable Image Gallery */
@@ -400,9 +400,7 @@ a.resource-hyperlink:visited {
     nav div {
         height: 64px;
     }
-    .think-icon-1 {
-        object-position: 1vw;
-    }
+
     .think-icon-2 {
         object-position: -2vw;
     }
