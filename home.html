@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/html5reset.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <title>Your Guide to UX Portfolios</title>
 </head>
 
@@ -28,7 +29,7 @@
       <p>
         Nice to meet you, I'm Jessica. I made this site in hopes of de-mystifying certain aspects of UX design portfolios so that you feel inspired and capable of creating your own. <br> <br>On this site, you'll find some useful information, helpful online resources, and a few inspiration UX portfolios. First, we'll establish some essential components of every UX design portfolio (in my humble opinion).
       </p>
-        <img class="decorative-icon" src="images/home/icon3.png" alt="Pink bunch of flowers illustration">
+        <img class="decorative-icon" src="images/home/icon3.png" alt="">
         <!-- <img src="images/home/icon6.png" alt="Pink cherry blossom branch illustration"> -->
       </div>
     </div>
@@ -39,15 +40,15 @@
           <span class="item-text">Recruiters look at dozens of design portfolios a day, and what better way to make yours stand out than to make it unique to you! While there are plenty of templates for any web-hosting program you may decide to use, it pays off to really make your portfolio custom-built to your liking, without getting too complex.</span> 
         </li>
       </ol>
-      <div class="star-icon"><img class="decorative-icon" src="images/home/icon4.png" alt="Pink stars illustration"></div>
+      <div class="star-icon"><img class="decorative-icon" src="images/home/icon4.png" alt=""></div>
       <ol>
         <li><span class="item-heading"><h3>2. Work</h3></span><br>
           <span class="item-text">Obviously something that recruiters are looking for are your selected works. The keyword here is "selected". <br><br> Design recruiters are busy people, and don't have time to look every project of everyone that applies. They don't want to spend too much time on a portfolio, so it's best to give them your best work in the most concise format. <br><br> It's also important to choose projects that you can talk at length about. Projects that you find particularly interesting would be a great example. Your interest will help demonstrate your passion for design when speaking about the projects.</span>
         </li>
       </ol>
       <div class="work-icon-grid">
-        <img class="work-icon-1" src="images/home/icon1.png" alt="Pink daisy illustration">
-        <img class="work-icon-2" src="images/home/icon2.png" alt="Pink flower with sparkles illustration">
+        <img class="work-icon-1" src="images/home/icon1.png" alt="">
+        <img class="work-icon-2" src="images/home/icon2.png" alt="">
       </div>
       <ol>
         <li><span class="item-heading"><h3>3. Thinking Process</h3></span><br>
@@ -62,24 +63,34 @@
     </div>
     <br>
     <h2>Bonus! Aesthetic Image Gallery </h2>
-    <div class="image-grid-container" tabindex="0">
-      <img class="image-grid-1"
-        src="images/home/home1.jpeg"
-        alt="Pastel-colored illustrated train traveling amongst pink trees along a body of water">
-      <img class="image-grid-2" 
-        src="images/home/home2.jpeg"
-        alt="Pastel-colored illustrated view of a city street">
-      <img class="image-grid-3" 
-        src="images/home/home3.jpeg" alt="Pastel-colored illustrated view of a seaside town">
+    <div id="button-mode">
+      <button id="change-view" tabindex="0">Change gallery view</button>
+      <h3 id="display-mode">Gallery View: Horizontal</h3>
     </div>
-
+    
+    <div id="horizontal" class="horizontal-image-gallery">
+      <img class="image-gallery-pic"
+        src="images/home/home1.jpeg"
+        alt="Pastel-colored illustrated train traveling amongst pink trees along a body of water"
+        tabindex="0">
+      <img class="image-gallery-pic" 
+        src="images/home/home2.jpeg"
+        alt="Pastel-colored illustrated view of a city street"
+        tabindex="0">
+      <img class="image-gallery-pic" 
+        src="images/home/home3.jpeg" alt="Pastel-colored illustrated view of a seaside town"
+        tabindex="0">
+    </div>
+    
   </main>
 
   <footer>
-    <h2>
+    <h2 tabindex="0">
       Designed by Jessica Cho
     </h2>
   </footer>
+
+  <script src="js/view-change.js"></script>
 
 </body>
 
