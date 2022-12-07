@@ -1,8 +1,5 @@
 
 /* General body/container styles */
-*:focus {
-    border: 1px solid #28262C;
-}
 html {
    cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym597.cur"), auto;
 }
