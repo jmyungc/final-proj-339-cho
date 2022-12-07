@@ -1,5 +1,11 @@
 
 /* General body/container styles */
+*:focus {
+    border: 1px solid #28262C;
+}
+html {
+   cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym597.cur"), auto;
+}
 body {
     background-color: #f3f1f1;
 }
@@ -81,10 +87,12 @@ nav div a {
     border-left: 1px solid #28262C;
     align-items: center;
 }
-nav a:hover {
+nav a:hover, nav div a:focus {
+    outline: none;
     background: #f3f1f1;
+    cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym596.cur"), auto;
 }
-a.current, a.current:hover {
+a.current, a.current:hover, a.current:focus {
     font-style: oblique;
     background: rgb(219, 82, 117, 0.25);
 }
@@ -177,7 +185,29 @@ li {
 }
 
 /* Scrollable Image Gallery */
-.image-grid-container {
+#button-mode {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(90%/2);
+    padding: 2%;
+    align-items: center;
+}
+
+#change-view {
+    background-color: #FEC9D2;
+    border: 1px solid #28262C;
+    border-radius: 8px;
+    margin-bottom: 1%;
+    width: 48%;
+}
+#change-view:active {
+    background-color: rgb(219, 82, 117, 0.5);
+}
+#display-mode {
+    font-size: 90%;
+}
+
+.horizontal-image-gallery {
     display: grid;
     grid-template-columns: 100% 100% 100%;
     justify-items: center;
@@ -186,17 +216,21 @@ li {
     height: 164vw;
     overflow-y: hidden;
 }
-.image-grid-1 {
+.image-gallery-pic {
     grid-column: span 1;
-    object-position: 0 -100px;
 }
-.image-grid-2 {
-    grid-column: span 1;
-    object-position: 0 -100px;
+
+.vertical-image-gallery {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    overflow-y: auto;
+    height: 100%;
+    row-gap: 4px;
 }
-.image-grid-3 {
-    grid-column: span 1;
-    object-position: 0 -100px;
+.vertical-image-gallery-pic {
+    grid-row: span 1;
+    object-position: 0;
 }
 
 footer {
@@ -332,10 +366,11 @@ a.resource-hyperlink:visited {
 /* TABLET VIEW */
 @media screen and (min-width: 768px) {
     /* Nav */
-    nav a:hover {
+    nav a:hover, nav a:focus {
+        border: 0;
         border: 2px dashed #28262C;
     }
-    a.current, a.current:hover {
+    a.current, a.current:hover, a.current:focus {
         font-style: oblique;
         border: 1px solid #28262C;
         background: rgb(219, 82, 117, 0.25);
@@ -379,13 +414,16 @@ a.resource-hyperlink:visited {
         font-size: 22px;
     }
 
-    .image-grid-container {
+    div#button-mode {
+        display: none;
+    }
+    .horizontal-image-gallery {
         overflow:scroll;
         height: auto;
         grid-template-columns: 1fr 1fr 1fr;
         margin-bottom: 4vw;
     }
-    .image-grid-1, .image-grid-2, .image-grid-3 {
+    .image-gallery-1, .image-gallery-2, .image-gallery-3 {
         width: 100%;
         object-position: 0 0;
     }
