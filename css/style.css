@@ -87,7 +87,7 @@ nav div a {
     border-left: 1px solid #28262C;
     align-items: center;
 }
-nav a:hover, nav div a:focus {
+a:hover{
     outline: none;
     background: #f3f1f1;
     cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym596.cur"), auto;
